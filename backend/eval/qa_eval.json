@@ -1,0 +1,30 @@
+{
+  "_comment": "Questions with hand-checked expectations from the real Bid1/Bid2 text. 'answer' = expected pattern in the model's answer; 'evidence' = at least one of these chunks (right file, text matching the pattern) must be cited / retrievable. 'refuse' cases have no support in that bid's documents (b1-mercury is a cross-bid trap: the Mercury Affidavit exists only in Bid2). 'unscored_answer' = the document text is ambiguous, so only citations are checked.",
+  "cases": [
+    {"id": "b1-final-deadline", "bid": "Bid1", "question": "What is the final submission deadline?",
+     "answer": "July 9, 2024", "evidence": [{"file": "Addendum 2", "pattern": "July 9, 2024"}]},
+    {"id": "b1-original-deadline", "bid": "Bid1", "question": "What was the original submission deadline?",
+     "answer": "27-JUN-2024|June 27", "evidence": [{"file": "FINAL.pdf", "pattern": "Solicitation Due"}]},
+    {"id": "b1-addendum2-change", "bid": "Bid1", "question": "What changed in Addendum 2?",
+     "answer": "due date|deadline", "evidence": [{"file": "Addendum 2", "pattern": "extend the due date"}]},
+    {"id": "b1-prebid", "bid": "Bid1", "question": "Is there a pre-bid meeting?",
+     "answer": "10-JUN-2024|June 10", "evidence": [{"file": "FINAL.pdf", "pattern": "Pre-Proposal Meeting"}]},
+    {"id": "b1-product", "bid": "Bid1", "question": "What product is being procured?",
+     "answer": "laptop|Chromebook|desktop|tablet|monitor|computing device", "evidence": [{"file": "", "pattern": "Chromebook|Laptop|laptop"}]},
+    {"id": "b1-documents", "bid": "Bid1", "question": "What documentation must be submitted?",
+     "answer": "1295|addendum|M/WBE|form", "evidence": [{"file": "", "pattern": "Form 1295|ACKNOWLEDGE AND RETURN|M/WBE Forms"}]},
+    {"id": "b2-model", "bid": "Bid2", "question": "What laptop model is required?",
+     "answer": "Latitude 5550", "evidence": [{"file": "PORFP", "pattern": "Latitude\\s+5550"}, {"file": "Dell_Laptop_Specs", "pattern": "Latitude\\s+5550"}]},
+    {"id": "b2-processor", "bid": "Bid2", "question": "What processor is required?",
+     "answer": "Core Ultra 5 125U", "evidence": [{"file": "Dell_Laptop_Specs", "pattern": "Core Ultra 5 125U"}]},
+    {"id": "b2-warranty", "bid": "Bid2", "question": "What warranty is required?",
+     "answer": "3 years?|three", "evidence": [{"file": "PORFP", "pattern": "purchased - 3 Years"}]},
+    {"id": "b2-affidavits", "bid": "Bid2", "question": "What affidavits are mentioned?",
+     "answer": "Mercury", "evidence": [{"file": "PORFP", "pattern": "Mercury Affidavit"}, {"file": "Mercury_Affidavit", "pattern": "MERCURY AFFIDAVIT"}, {"file": "Contract_Affidavit", "pattern": "AFFIDAVIT"}]},
+    {"id": "b2-deadline", "bid": "Bid2", "question": "What is the submission deadline?",
+     "unscored_answer": true, "evidence": [{"file": "PORFP", "pattern": "PROPOSAL DUE"}]},
+    {"id": "b1-award", "bid": "Bid1", "question": "Which vendor was awarded the contract?", "refuse": true},
+    {"id": "b2-award", "bid": "Bid2", "question": "Which vendor was awarded the contract?", "refuse": true},
+    {"id": "b1-mercury", "bid": "Bid1", "question": "Is a Mercury Affidavit required?", "refuse": true}
+  ]
+}

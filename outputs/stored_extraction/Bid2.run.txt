@@ -1,0 +1,69 @@
+
+--- Bid2: evidence coverage (retrieval only, no LLM)
+PASS b2-bid-number            Bid Number                             4 chunks; patterns found: [True]
+PASS b2-title                 Title                                  4 chunks; patterns found: [True]
+PASS b2-company               company_name                           4 chunks; patterns found: [True]
+PASS b2-contact               contact_info                           4 chunks; patterns found: [True]
+PASS b2-manufacturer          MFG for Registration                   4 chunks; patterns found: [True]
+PASS b2-product               Product                                4 chunks; patterns found: [True]
+PASS b2-model                 Model_no                               4 chunks; patterns found: [True]
+PASS b2-part                  Part_no                                4 chunks; patterns found: [True]
+PASS b2-processor             Product Specification                  4 chunks; patterns found: [True]
+PASS b2-ram                   Product Specification                  4 chunks; patterns found: [True]
+PASS b2-storage               Product Specification                  4 chunks; patterns found: [True]
+PASS b2-warranty              Product Specification                  4 chunks; patterns found: [True] (info, not scored)
+PASS b2-delivery              Delivery Date                          4 chunks; patterns found: [True]
+PASS b2-mercury               Any Additional Documentation Required  4 chunks; patterns found: [True]
+FAIL b2-contract-affidavit    Any Additional Documentation Required  4 chunks; patterns found: [False] (info, not scored)
+PASS b2-quote-validity        Term of Bid                            4 chunks; patterns found: [True]
+=> 14/14 scored checks passed (1.00)
+
+=== Bid2  (model: openai/gpt-oss-120b, complete: True)
+- Bid Number [found, conf 0.9] ['#E20P4600040', 'BPM044557', '00004079359']  <- PORFP_-_Dell_Laptop_Final.pdf p.1; Dell Laptops w_Extended Warranty - html
+- Title [found, conf 0.95] Dell Laptops w/Extended Warranty  <- Dell Laptops w_Extended Warranty - html
+- company_name [found, conf 0.95] State of Maryland Treasurer's Office  <- Dell Laptops w_Extended Warranty - html
+- contact_info [found, conf 0.9] ['Tamaira Hawkins, 410-260-7533, thawkins@treasurer.state.md.us', 'James Simpson, 410-260-6063, jsimpson@treas  <- PORFP_-_Dell_Laptop_Final.pdf p.3
+- Contract or Cooperative to use [found, conf 0.9] 2015 Master Contract, 060B5400007  <- PORFP_-_Dell_Laptop_Final.pdf p.1; PORFP_-_Dell_Laptop_Final.pdf p.1
+- Due Date [CONFLICT, conf 0.0] reconciliation required
+    * 06/01/2024 at 2:00 PM EDT  <- PORFP_-_Dell_Laptop_Final.pdf p.2
+    * 06/10/2024 02:00 PM EDT  <- Dell Laptops w_Extended Warranty - html
+- Pre Bid Meeting [not_found, conf 0.0] None  <- 
+- Delivery Date [found, conf 0.95] Delivery within 45 days of Award.  <- PORFP_-_Dell_Laptop_Final.pdf p.2
+- Term of Bid [found, conf 0.95] valid for at least 90 days after the set due date  <- PORFP_-_Dell_Laptop_Final.pdf p.2
+- Bid Submission Type [found, conf 0.9] ['eMMA e-Procurement system']  <- PORFP_-_Dell_Laptop_Final.pdf p.1; PORFP_-_Dell_Laptop_Final.pdf p.1
+- Bid Bond Requirement [not_found, conf 0.0] None  <- 
+- Payment Terms [found, conf 0.9] Payment within 120 days after shipment  <- Dell_Laptop_Specs.pdf p.3
+- Installation [not_found, conf 0.0] None  <- 
+- Any Additional Documentation Required [found, conf 0.71] ['Contract Affidavit', 'Mercury Affidavit']  <- Contract_Affidavit.pdf p.1; Mercury_Affidavit.pdf p.1; Contract_Affidavit.pdf p.3
+- MFG for Registration [found, conf 0.95] Dell  <- PORFP_-_Dell_Laptop_Final.pdf p.2; PORFP_-_Dell_Laptop_Final.pdf p.2
+- Model_no [found, conf 0.95] ['Dell Latitude 5550', 'Dell Thunderbolt 4 Dock – WD22TB4']  <- PORFP_-_Dell_Laptop_Final.pdf p.3; Dell Laptops w_Extended Warranty - html
+- Part_no [found, conf 0.95] ['SI# CC7802', 'WD22TB4', '210-BLYZ']  <- PORFP_-_Dell_Laptop_Final.pdf p.3; Dell_Laptop_Specs.pdf p.1
+- Product [found, conf 0.95] ['Dell Latitude 5550 laptop', 'Dell Thunderbolt 4 Dock – WD22TB4']  <- Dell Laptops w_Extended Warranty - html; PORFP_-_Dell_Laptop_Final.pdf p.3
+- Product Specification [found, conf 0.95] {'product': 'Dell Latitude 5550', 'specifications': {'Processor': 'Intel Core Ultra 5 125U processor (12 MB ca  <- Dell_Laptop_Specs.pdf p.1; PORFP_-_Dell_Laptop_Final.pdf p.3
+- Bid Summary [found, conf 0.8] The Maryland State Treasurer’s Office issued a Purchase Order Request for Proposals (PORFP #E20P4600040, solic  <- PORFP_-_Dell_Laptop_Final.pdf p.1; Dell Laptops w_Extended Warranty - html; PORFP_-_Dell_Laptop_Final.pdf p.2
+
+Groq: 6 calls (0 failed), tokens in/out=22051/7831, call latency avg/min/max=36.6/30.9/46.5s, total 220.2s, prompt chars=[13626, 12441, 14270, 16044, 17889, 11740], finish=['stop', 'stop', 'stop', 'stop', 'stop', 'stop']
+Retries: malformed-output=0, citation-follow-ups=1
+
+Database validation: valid=True, citations checked=36, found fields=16, errors=[]
+
+--- Bid2: extraction vs ground truth
+PASS b2-bid-number            Bid Number                             status=found, value=#E20P4600040 BPM044557 00004079359
+PASS b2-title                 Title                                  status=found, value=Dell Laptops w/Extended Warranty
+PASS b2-company               company_name                           status=found, value=State of Maryland Treasurer's Office
+PASS b2-contact               contact_info                           status=found, value=Tamaira Hawkins, 410-260-7533, thawkins@treasurer.state.md.us James Simpson, 410-260-6063,
+PASS b2-manufacturer          MFG for Registration                   status=found, value=Dell
+PASS b2-product               Product                                status=found, value=Dell Latitude 5550 laptop Dell Thunderbolt 4 Dock – WD22TB4
+PASS b2-model                 Model_no                               status=found, value=Dell Latitude 5550 Dell Thunderbolt 4 Dock – WD22TB4
+PASS b2-part                  Part_no                                status=found, value=SI# CC7802 WD22TB4 210-BLYZ
+PASS b2-processor             Product Specification                  status=found, value=Dell Latitude 5550 Intel Core Ultra 5 125U processor (12 MB cache, 12 cores, 14 threads, u
+PASS b2-ram                   Product Specification                  status=found, value=Dell Latitude 5550 Intel Core Ultra 5 125U processor (12 MB cache, 12 cores, 14 threads, u
+PASS b2-storage               Product Specification                  status=found, value=Dell Latitude 5550 Intel Core Ultra 5 125U processor (12 MB cache, 12 cores, 14 threads, u
+PASS b2-warranty              Product Specification                  status=found, value=Dell Latitude 5550 Intel Core Ultra 5 125U processor (12 MB cache, 12 cores, 14 threads, u (info, not scored)
+PASS b2-delivery              Delivery Date                          status=found, value=Delivery within 45 days of Award.
+PASS b2-mercury               Any Additional Documentation Required  status=found, value=Contract Affidavit Mercury Affidavit
+PASS b2-contract-affidavit    Any Additional Documentation Required  status=found, value=Contract Affidavit Mercury Affidavit (info, not scored)
+PASS b2-quote-validity        Term of Bid                            status=found, value=valid for at least 90 days after the set due date
+PASS b2-no-prebid             Pre Bid Meeting                        status=not_found, value=null
+PASS b2-no-bond               Bid Bond Requirement                   status=not_found, value=null
+=> 16/16 scored checks passed (1.00)

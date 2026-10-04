@@ -1,0 +1,518 @@
+{
+  "bid_id": "Bid1",
+  "provenance": {
+    "extraction": "replayed from a stored live Groq run (openai/gpt-oss-120b); Bid1.extraction.json",
+    "other_stages": "executed live against the database by this export; reconciliation used deterministic rules only (no Groq)",
+    "note": "the stored extraction predates the latest Bid Number and multi-product Product Specification changes"
+  },
+  "pipeline_status": "complete",
+  "stages": {
+    "ingestion": "complete",
+    "retrieval": "complete",
+    "extraction": "complete",
+    "reconciliation": "complete",
+    "validation": "complete"
+  },
+  "fields": [
+    {
+      "field": "Bid Number",
+      "value": [
+        "JA-207652",
+        "168884",
+        "00004079100"
+      ],
+      "status": "found",
+      "confidence": 0.9,
+      "citations": [
+        {
+          "file": "Student and Staff Computing Devices __SOURCING #168884__ - Bid Information - {3} _ BidNet Direct.html",
+          "document_type": "bid_document",
+          "page": null,
+          "section": "JA-207652 - Student and Staff Computing Devices **SOURCING #168884**",
+          "chunk_id": 525,
+          "chunk_index": 1
+        }
+      ],
+      "notes": null
+    },
+    {
+      "field": "Title",
+      "value": "Request For Proposal 168884 JA-207652 Student and Staff Computing Devices",
+      "status": "found",
+      "confidence": 0.9,
+      "citations": [
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 31,
+          "section": null,
+          "chunk_id": 442,
+          "chunk_index": 139
+        },
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 2,
+          "section": null,
+          "chunk_id": 304,
+          "chunk_index": 1
+        }
+      ],
+      "notes": null
+    },
+    {
+      "field": "company_name",
+      "value": "Dallas Independent School District",
+      "status": "found",
+      "confidence": 0.9,
+      "citations": [
+        {
+          "file": "Student and Staff Computing Devices __SOURCING #168884__ - Bid Information - {3} _ BidNet Direct.html",
+          "document_type": "bid_document",
+          "page": null,
+          "section": "JA-207652 - Student and Staff Computing Devices **SOURCING #168884**",
+          "chunk_id": 525,
+          "chunk_index": 1
+        }
+      ],
+      "notes": null
+    },
+    {
+      "field": "contact_info",
+      "value": [
+        "Procurement Services, 972-925-3700, ProcurementCS@dallasisd.org"
+      ],
+      "status": "found",
+      "confidence": 0.9,
+      "citations": [
+        {
+          "file": "Student and Staff Computing Devices __SOURCING #168884__ - Bid Information - {3} _ BidNet Direct.html",
+          "document_type": "bid_document",
+          "page": null,
+          "section": "JA-207652 - Student and Staff Computing Devices **SOURCING #168884**",
+          "chunk_id": 525,
+          "chunk_index": 1
+        }
+      ],
+      "notes": null
+    },
+    {
+      "field": "Contract or Cooperative to use",
+      "value": null,
+      "status": "not_found",
+      "confidence": 0.0,
+      "citations": [],
+      "notes": "Not found in the retrieved evidence"
+    },
+    {
+      "field": "Due Date",
+      "value": "July 9, 2024 at 2:00 PM CST",
+      "status": "resolved",
+      "confidence": 0.95,
+      "citations": [
+        {
+          "file": "Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf",
+          "document_type": "addendum",
+          "page": 1,
+          "section": null,
+          "chunk_id": 302,
+          "chunk_index": 0
+        }
+      ],
+      "notes": null,
+      "reconciliation": {
+        "original_value": "27-JUN-2024 14:00:00",
+        "original_citations": [
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "document_type": "bid_document",
+            "page": 2,
+            "section": null,
+            "chunk_id": 304,
+            "chunk_index": 1
+          }
+        ]
+      }
+    },
+    {
+      "field": "Pre Bid Meeting",
+      "value": "10-JUN-2024 14:00:00",
+      "status": "unchanged",
+      "confidence": 0.75,
+      "citations": [
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 2,
+          "section": null,
+          "chunk_id": 304,
+          "chunk_index": 1
+        }
+      ],
+      "notes": "No addendum changes this field."
+    },
+    {
+      "field": "Delivery Date",
+      "value": null,
+      "status": "not_found",
+      "confidence": 0.0,
+      "citations": [],
+      "notes": "Not found in the retrieved evidence"
+    },
+    {
+      "field": "Term of Bid",
+      "value": "The term of this proposal shall be for a three (3) year agreement with two (2) successive one (1) year extensions based on the long-range needs of the District and mutual consent of both parties not to exceed five (5) years total.",
+      "status": "unchanged",
+      "confidence": 0.85,
+      "citations": [
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 2,
+          "section": null,
+          "chunk_id": 305,
+          "chunk_index": 2
+        }
+      ],
+      "notes": "No addendum changes this field."
+    },
+    {
+      "field": "Bid Submission Type",
+      "value": [
+        "online via iSupplier portal",
+        "manual paper submission (sealed envelope)"
+      ],
+      "status": "found",
+      "confidence": 0.9,
+      "citations": [
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 9,
+          "section": null,
+          "chunk_id": 329,
+          "chunk_index": 26
+        },
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 9,
+          "section": null,
+          "chunk_id": 330,
+          "chunk_index": 27
+        }
+      ],
+      "notes": null
+    },
+    {
+      "field": "Bid Bond Requirement",
+      "value": null,
+      "status": "not_found",
+      "confidence": 0.0,
+      "citations": [],
+      "notes": "Not found in the retrieved evidence"
+    },
+    {
+      "field": "Payment Terms",
+      "value": "Invoices must be paid within 10 days of receiving payment from the district; retainage may not exceed 5% and cannot be withheld on non‑disputed amounts.",
+      "status": "unchanged",
+      "confidence": 0.82,
+      "citations": [
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 51,
+          "section": null,
+          "chunk_id": 505,
+          "chunk_index": 202
+        }
+      ],
+      "notes": "No addendum changes this field."
+    },
+    {
+      "field": "Installation",
+      "value": [
+        "Software installation (including Windows Autopilot and Chromebook Google Management enrollment)",
+        "Asset tagging and etching (asset decaling)",
+        "Device deployment and setup (white‑glove delivery to varied locations)",
+        "Asset control reporting"
+      ],
+      "status": "unchanged",
+      "confidence": 0.85,
+      "citations": [
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 7,
+          "section": null,
+          "chunk_id": 322,
+          "chunk_index": 19
+        },
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 3,
+          "section": null,
+          "chunk_id": 311,
+          "chunk_index": 8
+        },
+        {
+          "file": "Addendum 1 RFP JA-207652 Student and Staff Computing Devices.pdf",
+          "document_type": "addendum",
+          "page": 4,
+          "section": null,
+          "chunk_id": 298,
+          "chunk_index": 16
+        }
+      ],
+      "notes": "No addendum changes this field."
+    },
+    {
+      "field": "Any Additional Documentation Required",
+      "value": [
+        "Form 1295 (Certificate of Interested Parties)",
+        "Standard Form LLL (Disclosure Form to Report Lobbying)",
+        "Certificate of Insurance/Bond"
+      ],
+      "status": "unchanged",
+      "confidence": 0.85,
+      "citations": [
+        {
+          "file": "Addendum 1 RFP JA-207652 Student and Staff Computing Devices.pdf",
+          "document_type": "addendum",
+          "page": 4,
+          "section": null,
+          "chunk_id": 296,
+          "chunk_index": 14
+        },
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 26,
+          "section": null,
+          "chunk_id": 414,
+          "chunk_index": 111
+        },
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 17,
+          "section": null,
+          "chunk_id": 361,
+          "chunk_index": 58
+        }
+      ],
+      "notes": "No addendum changes this field."
+    },
+    {
+      "field": "MFG for Registration",
+      "value": null,
+      "status": "not_found",
+      "confidence": 0.0,
+      "citations": [],
+      "notes": "Not found in the retrieved evidence"
+    },
+    {
+      "field": "Model_no",
+      "value": null,
+      "status": "not_found",
+      "confidence": 0.0,
+      "citations": [],
+      "notes": "Not found in the retrieved evidence"
+    },
+    {
+      "field": "Part_no",
+      "value": null,
+      "status": "not_found",
+      "confidence": 0.0,
+      "citations": [],
+      "notes": "Not found in the retrieved evidence"
+    },
+    {
+      "field": "Product",
+      "value": [
+        "laptops",
+        "desktops",
+        "tablet devices",
+        "display monitors"
+      ],
+      "status": "unchanged",
+      "confidence": 0.8,
+      "citations": [
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 3,
+          "section": null,
+          "chunk_id": 307,
+          "chunk_index": 4
+        }
+      ],
+      "notes": "No addendum changes this field."
+    },
+    {
+      "field": "Product Specification",
+      "value": {
+        "product": "Student Laptop",
+        "specifications": {
+          "Screen Resolution": "1920-1080 Non-Touch",
+          "Memory": "Minimum 16GB RAM DDR5",
+          "Wireless": "802.11AX WiFi-6E and Bluetooth 5.1",
+          "Power Supply": "Type C, 65W",
+          "Battery Life": "Minimum 10 Hours",
+          "Ports": "Minimum 2 USB 3.0; 1 Type C; 65HDMI; 1 headphone/microphone combo",
+          "Storage": "256 GB NVMe SSD",
+          "Operating System": "Windows 11 Pro",
+          "Warranty": "3-year minimum"
+        }
+      },
+      "status": "found",
+      "confidence": 0.9,
+      "citations": [
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 5,
+          "section": null,
+          "chunk_id": 317,
+          "chunk_index": 14
+        }
+      ],
+      "notes": null
+    },
+    {
+      "field": "Bid Summary",
+      "value": "The Dallas Independent School District issued RFP #JA-207652 for Student and Staff Computing Devices. Proposals must include a detailed M/WBE compliance plan, any required Mentor‑Protégé Agreement, product literature, and an insurance/bond coverage form to be submitted within ten days of award. The solicitation’s closing date is July 9, 2024, with a pre‑proposal meeting scheduled for June 10, 2024 at 2:00 PM CST (via TEAMS). Submissions may be made electronically through the iSupplier portal or as a sealed hard‑copy envelope delivered to Procurement Services (phone 972‑925‑3700, email ProcurementCS@dallasisd.org). The contract term is three years with two one‑year renewal options, not to exceed five years total.",
+      "status": "found",
+      "confidence": 0.8,
+      "citations": [
+        {
+          "file": "Student and Staff Computing Devices __SOURCING #168884__ - Bid Information - {3} _ BidNet Direct.html",
+          "document_type": "bid_document",
+          "page": null,
+          "section": "JA-207652 - Student and Staff Computing Devices **SOURCING #168884**",
+          "chunk_id": 525,
+          "chunk_index": 1
+        },
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 31,
+          "section": null,
+          "chunk_id": 442,
+          "chunk_index": 139
+        },
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 44,
+          "section": null,
+          "chunk_id": 477,
+          "chunk_index": 174
+        },
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 17,
+          "section": null,
+          "chunk_id": 362,
+          "chunk_index": 59
+        },
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 9,
+          "section": null,
+          "chunk_id": 329,
+          "chunk_index": 26
+        },
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 2,
+          "section": null,
+          "chunk_id": 304,
+          "chunk_index": 1
+        },
+        {
+          "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+          "document_type": "bid_document",
+          "page": 2,
+          "section": null,
+          "chunk_id": 305,
+          "chunk_index": 2
+        },
+        {
+          "file": "Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf",
+          "document_type": "addendum",
+          "page": 1,
+          "section": null,
+          "chunk_id": 302,
+          "chunk_index": 0
+        }
+      ],
+      "notes": null
+    }
+  ],
+  "unresolved_fields": [],
+  "extraction_conflicts_before_reconciliation": [
+    "Due Date",
+    "Pre Bid Meeting"
+  ],
+  "addendum_timeline": [
+    {
+      "order": 1,
+      "number": 1,
+      "file": "Addendum 1 RFP JA-207652 Student and Staff Computing Devices.pdf",
+      "identified_by": "document_type"
+    },
+    {
+      "order": 2,
+      "number": 2,
+      "file": "Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf",
+      "identified_by": "document_type"
+    }
+  ],
+  "reconciled_changes": [
+    {
+      "field": "Due Date",
+      "original_value": "27-JUN-2024 14:00:00",
+      "final_value": "July 9, 2024 at 2:00 PM CST",
+      "status": "resolved",
+      "resolution_method": "explicit_addendum_change",
+      "confidence": 0.95,
+      "changes": [
+        {
+          "addendum": "Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf",
+          "addendum_number": 2,
+          "type": "replacement",
+          "previous_value": "27-JUN-2024 14:00:00",
+          "new_value": "July 9, 2024 at 2:00 PM CST",
+          "explanation": "Replacement stated by the addendum: \"The new due date for this RFP will be July 9, 2024 at 2:00 PM CST.\"",
+          "method": "rule",
+          "citations": [
+            {
+              "file": "Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf",
+              "document_type": "addendum",
+              "page": 1,
+              "section": null,
+              "chunk_id": 302,
+              "chunk_index": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "valid": true,
+    "checked": {
+      "citations": 60,
+      "unique_chunks": 19,
+      "extraction_fields": 20,
+      "reconciled_fields": 11
+    },
+    "errors": [],
+    "warnings": []
+  }
+}

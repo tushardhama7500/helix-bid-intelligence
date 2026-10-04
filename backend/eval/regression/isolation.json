@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "id": "iso-b1-mercury-question-never-reaches-bid2", "bid_id": "Bid1", "question_or_field": "Is a Mercury Affidavit required?",
+      "expected_behavior": "Evidence for a Bid1 question about the Mercury Affidavit (which exists only in Bid2) contains only Bid1 chunks and no Mercury Affidavit text.",
+      "expected_sources": [],
+      "notes": "Cross-bid contamination trap; real Q&A refused it.",
+      "check": "no_cross_bid", "params": {"forbidden_text": "MERCURY AFFIDAVIT|Mercury Affidavit"}
+    },
+    {
+      "id": "iso-b2-deadline-question-never-reaches-bid1", "bid_id": "Bid2", "question_or_field": "What is the submission deadline?",
+      "expected_behavior": "Evidence for a Bid2 question contains only Bid2 chunks (no Bid1 RFP or addendum text).",
+      "expected_sources": [],
+      "notes": "Bid1's addenda talk about a due date; they must never be used for Bid2.",
+      "check": "no_cross_bid", "params": {"forbidden_text": "JA-207652"}
+    },
+    {
+      "id": "iso-b1-generic-expansion-stays-in-bid", "bid_id": "Bid1", "question_or_field": "What product is being procured?",
+      "expected_behavior": "The generated query variant is bid-scoped too: evidence stays in Bid1 even though Bid2 also buys laptops.",
+      "expected_sources": [],
+      "notes": "Phase 8 query expansion must not escape the bid filter.",
+      "check": "no_cross_bid", "params": {"forbidden_text": "Latitude 5550"}
+    }
+  ]
+}

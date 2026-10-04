@@ -1,0 +1,11 @@
+{
+  "cases": [
+    {
+      "id": "gr-b1-reconciled-value-is-grounded-and-cited", "bid_id": "Bid1", "question_or_field": "(reconciled Bid1 report)",
+      "expected_behavior": "Every citation of the reconciled Bid1 output exists, belongs to Bid1 and matches its stored file/page/chunk, and every final value is contained in the text it cites.",
+      "expected_sources": [{"file": "Addendum 2", "page": 1, "pattern": "July 9, 2024"}],
+      "notes": "Validation agent re-checks against the database; it never repairs data.",
+      "check": "validated_grounding", "params": {}
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+[
+  {
+    "id": "b1-final-deadline",
+    "checks": {
+      "answer_correct": true,
+      "isolation": true,
+      "citation_correct": true,
+      "grounded": true
+    },
+    "answer": "July 9, 2024 at 2:00 PM CST",
+    "seconds": 2.1,
+    "groq": {
+      "calls": 1,
+      "tokens_in": 1930,
+      "tokens_out": 142,
+      "prompt_chars": [
+        7435
+      ]
+    },
+    "answerable": true,
+    "sources": [
+      "Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf p.1",
+      "Addendum 1 RFP JA-207652 Student and Staff Computing Devices.pdf p.4"
+    ],
+    "notes": null
+  },
+  {
+    "id": "b1-original-deadline",
+    "checks": {
+      "answer_correct": true,
+      "isolation": true,
+      "citation_correct": true,
+      "grounded": true
+    },
+    "answer": "27-JUN-2024 14:00:00",
+    "seconds": 2.6,
+    "groq": {
+      "calls": 1,
+      "tokens_in": 1983,
+      "tokens_out": 143,
+      "prompt_chars": [
+        7831
+      ]
+    },
+    "answerable": true,
+    "sources": [
+      "JA-207652 Student and Staff Computing Devices FINAL.pdf p.2"
+    ],
+    "notes": null
+  },
+  {
+    "id": "b1-addendum2-change",
+    "checks": {
+      "answer_correct": true,
+      "isolation": true,
+      "citation_correct": true,
+      "grounded": true
+    },
+    "answer": "Addendum\u202f2 extends the RFP\u2019s due date to July\u202f9,\u202f2024 at\u202f2:00\u202fPM\u202fCST.",
+    "seconds": 0.5,
+    "groq": {
+      "calls": 1,
+      "tokens_in": 1564,
+      "tokens_out": 259,
+      "prompt_chars": [
+        6265
+      ]
+    },
+    "answerable": true,
+    "sources": [
+      "Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf p.1"
+    ],
+    "notes": null
+  },
+  {
+    "id": "b1-prebid",
+    "checks": {
+      "answer_correct": true,
+      "isolation": true,
+      "citation_correct": true,
+      "grounded": true
+    },
+    "answer": "Yes, a pre\u2011bid meeting is scheduled for 10\u2011JUN\u20112024 at 2:00\u202fPM CST via TEAMS video conference.",
+    "seconds": 4.2,
+    "groq": {
+      "calls": 1,
+      "tokens_in": 2200,
+      "tokens_out": 355,
+      "prompt_chars": [
+        8740
+      ]
+    },
+    "answerable": true,
+    "sources": [
+      "JA-207652 Student and Staff Computing Devices FINAL.pdf p.2",
+      "Student and Staff Computing Devices __SOURCING #168884__ - Bid Information - {3} _ BidNet Direct.html p.None"
+    ],
+    "notes": null
+  },
+  {
+    "id": "b1-product",
+    "checks": {
+      "answer_correct": true,
+      "isolation": true,
+      "citation_correct": true,
+      "grounded": true
+    },
+    "answer": "Student and staff computing devices, including laptops, desktops, tablet devices, and display monitors.",
+    "seconds": 44.3,
+    "groq": {
+      "calls": 2,
+      "tokens_in": 2754,
+      "tokens_out": 227,
+      "prompt_chars": [
+        12796,
+        12981
+      ]
+    },
+    "answerable": true,
+    "sources": [
+      "JA-207652 Student and Staff Computing Devices FINAL.pdf p.3"
+    ],
+    "notes": null
+  },
+  {
+    "id": "b1-documents",
+    "checks": {
+      "answer_correct": true,
+      "isolation": true,
+      "citation_correct": true,
+      "grounded": true
+    },
+    "answer": "The offer must include pertinent literature/documentation for the proposed products or services, any required credit application, factory\u2011authorized repair and maintenance certifications for resellers, a certificate of insurance/bond, Form\u202f1295 (Certificate of Interested Parties) attached to the response, and any required subcontractor change forms with written justification and supporting documentation. For manual submissions, a single original hard copy is required. During contract performance, the prime must submit an M/WBE Pay Activity Report with proof of payments.",
+    "seconds": 1.5,
+    "groq": {
+      "calls": 1,
+      "tokens_in": 1885,
+      "tokens_out": 714,
+      "prompt_chars": [
+        8569
+      ]
+    },
+    "answerable": true,
+    "sources": [
+      "JA-207652 Student and Staff Computing Devices FINAL.pdf p.9",
+      "JA-207652 Student and Staff Computing Devices FINAL.pdf p.9",
+      "JA-207652 Student and Staff Computing Devices FINAL.pdf p.3",
+      "JA-207652 Student and Staff Computing Devices FINAL.pdf p.17",
+      "Addendum 1 RFP JA-207652 Student and Staff Computing Devices.pdf p.4",
+      "JA-207652 Student and Staff Computing Devices FINAL.pdf p.51"
+    ],
+    "notes": null
+  },
+  {
+    "id": "b2-model",
+    "checks": {
+      "answer_correct": true,
+      "isolation": true,
+      "citation_correct": true,
+      "grounded": true
+    },
+    "answer": "Dell Latitude 5550",
+    "seconds": 18.5,
+    "groq": {
+      "calls": 1,
+      "tokens_in": 2126,
+      "tokens_out": 140,
+      "prompt_chars": [
+        7258
+      ]
+    },
+    "answerable": true,
+    "sources": [
+      "PORFP_-_Dell_Laptop_Final.pdf p.3",
+      "Dell Laptops w_Extended Warranty - Bid Information - {3} _ BidNet Direct.html p.None",
+      "Dell_Laptop_Specs.pdf p.1"
+    ],
+    "notes": null
+  },
+  {
+    "id": "b2-processor",
+    "checks": {
+      "answer_correct": true,
+      "isolation": true,
+      "citation_correct": true,
+      "grounded": true
+    },
+    "answer": "Intel Core Ultra 5 125U processor",
+    "seconds": 11.0,
+    "groq": {
+      "calls": 1,
+      "tokens_in": 1898,
+      "tokens_out": 145,
+      "prompt_chars": [
+        6904
+      ]
+    },
+    "answerable": true,
+    "sources": [
+      "Dell_Laptop_Specs.pdf p.1"
+    ],
+    "notes": null
+  },
+  {
+    "id": "b2-warranty",
+    "checks": {
+      "answer_correct": true,
+      "isolation": true,
+      "citation_correct": true,
+      "grounded": true
+    },
+    "answer": "A 3\u2011year Dell Limited Hardware Warranty, extended for all machines purchased, commencing on the date of delivery and ending three years thereafter. A warranty certificate or affidavit must be presented upon award.",
+    "seconds": 15.7,
+    "groq": {
+      "calls": 1,
+      "tokens_in": 1664,
+      "tokens_out": 168,
+      "prompt_chars": [
+        6620
+      ]
+    },
+    "answerable": true,
+    "sources": [
+      "PORFP_-_Dell_Laptop_Final.pdf p.3",
+      "PORFP_-_Dell_Laptop_Final.pdf p.3"
+    ],
+    "notes": null
+  },
+  {
+    "id": "b2-affidavits",
+    "checks": {
+      "answer_correct": true,
+      "isolation": true,
+      "citation_correct": true,
+      "grounded": true
+    },
+    "answer": "The documents refer to a Contract Affidavit, a Mercury Affidavit, and a Proposal Affidavit.",
+    "seconds": 12.1,
+    "groq": {
+      "calls": 1,
+      "tokens_in": 1467,
+      "tokens_out": 454,
+      "prompt_chars": [
+        5679
+      ]
+    },
+    "answerable": true,
+    "sources": [
+      "Contract_Affidavit.pdf p.3",
+      "Mercury_Affidavit.pdf p.1",
+      "Mercury_Affidavit.pdf p.1",
+      "Contract_Affidavit.pdf p.1",
+      "Mercury_Affidavit.pdf p.1",
+      "Contract_Affidavit.pdf p.3"
+    ],
+    "notes": null
+  },
+  {
+    "id": "b2-deadline",
+    "checks": {
+      "isolation": true,
+      "citation_correct": false
+    },
+    "answer": "I could not find sufficient evidence to answer this question.",
+    "seconds": 16.0,
+    "groq": {
+      "calls": 1,
+      "tokens_in": 1635,
+      "tokens_out": 288,
+      "prompt_chars": [
+        6481
+      ]
+    },
+    "answerable": false,
+    "sources": [],
+    "notes": "The model found the evidence insufficient."
+  },
+  {
+    "id": "b1-award",
+    "checks": {
+      "refusal": true,
+      "isolation": true
+    },
+    "answer": "I could not find sufficient evidence to answer this question.",
+    "seconds": 15.8,
+    "groq": {
+      "calls": 1,
+      "tokens_in": 1875,
+      "tokens_out": 126,
+      "prompt_chars": [
+        8955
+      ]
+    },
+    "answerable": false,
+    "sources": [],
+    "notes": "The model found the evidence insufficient."
+  },
+  {
+    "id": "b2-award",
+    "checks": {
+      "refusal": true,
+      "isolation": true
+    },
+    "answer": "I could not find sufficient evidence to answer this question.",
+    "seconds": 13.5,
+    "groq": {
+      "calls": 1,
+      "tokens_in": 1720,
+      "tokens_out": 164,
+      "prompt_chars": [
+        6952
+      ]
+    },
+    "answerable": false,
+    "sources": [],
+    "notes": "The model found the evidence insufficient."
+  },
+  {
+    "id": "b1-mercury",
+    "checks": {
+      "refusal": true,
+      "isolation": true
+    },
+    "answer": "I could not find sufficient evidence to answer this question.",
+    "seconds": 18.4,
+    "groq": {
+      "calls": 1,
+      "tokens_in": 2157,
+      "tokens_out": 128,
+      "prompt_chars": [
+        9765
+      ]
+    },
+    "answerable": false,
+    "sources": [],
+    "notes": "The model found the evidence insufficient."
+  }
+]

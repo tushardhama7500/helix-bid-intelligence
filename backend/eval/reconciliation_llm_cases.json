@@ -1,0 +1,41 @@
+{
+  "_comment": "Controlled ambiguous addendum cases for the REAL Groq reconciliation fallback. The evidence is synthetic (the real Bid1/Bid2 addenda contain no ambiguous wording about the reconcilable fields), but it goes through the real fallback code and the real model. 'forbid_final' lists values the system must never produce (an invented or wrongly applied value).",
+  "cases": [
+    {
+      "id": "amended-as-described",
+      "field": "bid_bond", "original": "A bid bond of 5% of the bid amount is required.",
+      "addendum": "ADDENDUM No. 3\nThe bid bond requirement is amended as described below. A bid bond of 10% of the bid amount is now required.",
+      "expect": {"status": "resolved", "final_pattern": "10% of the bid amount"}
+    },
+    {
+      "id": "amended-to-clarify",
+      "field": "bid_bond", "original": "A bid bond of 5% of the bid amount is required.",
+      "addendum": "ADDENDUM No. 3\nThe bid bond requirement is amended to clarify that the bond may be a surety bond. The amount is unchanged.",
+      "expect": {"status": "unchanged", "final_pattern": "5% of the bid amount"}, "forbid_final": ["surety"]
+    },
+    {
+      "id": "replace-with-following",
+      "field": "delivery_date", "original": "Delivery within 60 days of award.",
+      "addendum": "ADDENDUM No. 3\nReplace the delivery requirement with the following: Delivery shall be completed within 30 days of award.",
+      "expect": {"status": "resolved", "final_pattern": "30 days of award"}
+    },
+    {
+      "id": "revised-no-value-given",
+      "field": "delivery_date", "original": "Delivery within 60 days of award.",
+      "addendum": "ADDENDUM No. 3\nThe delivery requirement is revised as discussed during the pre-bid meeting.",
+      "expect": {"no_invented_value": true}, "forbid_final": ["30 days", "45 days", "90 days"]
+    },
+    {
+      "id": "extended-no-date-given",
+      "field": "due_date", "original": "27-JUN-2024 14:00:00",
+      "addendum": "ADDENDUM No. 3\nThe submission deadline has been extended. A new date will be announced.",
+      "expect": {"no_invented_value": true}, "forbid_final": ["July", "2024-07", "7/"]
+    },
+    {
+      "id": "unrelated-mention",
+      "field": "payment_terms", "original": "Net 30 days from invoice.",
+      "addendum": "ADDENDUM No. 3\nPayment terms are discussed in Section 9. Vendors should replace placeholder text in their forms before submission.",
+      "expect": {"status": "unchanged", "final_pattern": "Net 30"}, "forbid_final": ["placeholder"]
+    }
+  ]
+}

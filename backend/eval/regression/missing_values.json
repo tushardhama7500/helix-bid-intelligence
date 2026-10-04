@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "id": "mv-b1-no-mercury-affidavit", "bid_id": "Bid1", "question_or_field": "Mercury Affidavit",
+      "expected_behavior": "Bid1 contains no Mercury Affidavit text, so any answer other than 'not found / refusal' would be invented.",
+      "expected_sources": [], "notes": "Real Q&A refused this question.",
+      "check": "absent_from_bid", "params": {"pattern": "mercury"}
+    },
+    {
+      "id": "mv-b2-no-bid-bond", "bid_id": "Bid2", "question_or_field": "bid_bond",
+      "expected_behavior": "Bid2 never mentions a bond: the Bid Bond Requirement must be null.",
+      "expected_sources": [], "notes": "Real extraction returned null in every run.",
+      "check": "absent_from_bid", "params": {"pattern": "\\mbond"}
+    },
+    {
+      "id": "mv-b2-no-pre-bid-meeting", "bid_id": "Bid2", "question_or_field": "pre_bid_meeting",
+      "expected_behavior": "Bid2 has no pre-bid / pre-proposal meeting: the field must be null.",
+      "expected_sources": [], "notes": "Questions-due dates are not meetings.",
+      "check": "absent_from_bid", "params": {"pattern": "pre-?\\s?(bid|proposal)\\s+(meeting|conference)"}
+    },
+    {
+      "id": "mv-b1-no-contract-award", "bid_id": "Bid1", "question_or_field": "Which vendor was awarded the contract?",
+      "expected_behavior": "No document names an awarded vendor; the only correct answer is the refusal.",
+      "expected_sources": [], "notes": "Documents describe an award process, never a winner. (\"notice of award\" appears only in a contract order-of-precedence clause, so it is not part of the pattern.)",
+      "check": "absent_from_bid", "params": {"pattern": "(was|has been|were) awarded to|awarded (the )?contract to"}
+    }
+  ]
+}

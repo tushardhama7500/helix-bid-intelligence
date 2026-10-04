@@ -1,0 +1,121 @@
+[
+  {
+    "id": "b1-final-deadline",
+    "query": "What is the final submission deadline for Bid1?",
+    "bid_id": "Bid1",
+    "relevant": [{"file_contains": "Addendum 2", "content_regex": "July 9, 2024"}]
+  },
+  {
+    "id": "b1-original-deadline",
+    "query": "What was the original submission deadline?",
+    "bid_id": "Bid1",
+    "relevant": [{"file_contains": "FINAL.pdf", "content_regex": "Solicitation Due"}]
+  },
+  {
+    "id": "b1-addendum2-change",
+    "query": "What changed in Addendum 2?",
+    "bid_id": "Bid1",
+    "relevant": [{"file_contains": "Addendum 2", "content_regex": "extend the due date"}]
+  },
+  {
+    "id": "b1-usb",
+    "query": "What USB specification is required?",
+    "bid_id": "Bid1",
+    "relevant": [{"file_contains": "Addendum 1", "content_regex": "USB 3\\.1 is a minimum"}]
+  },
+  {
+    "id": "b1-accidental-damage",
+    "query": "Is accidental damage protection required?",
+    "bid_id": "Bid1",
+    "relevant": [{"file_contains": "Addendum 1", "content_regex": "will not ask for Accidental Damage Protection"}]
+  },
+  {
+    "id": "b1-warranty",
+    "query": "What minimum warranty is required for student Chromebooks?",
+    "bid_id": "Bid1",
+    "relevant": [{"file_contains": "Addendum 1", "content_regex": "one-year warranty"}]
+  },
+  {
+    "id": "b1-prebid-meeting",
+    "query": "When is the pre-proposal meeting?",
+    "bid_id": "Bid1",
+    "relevant": [{"file_contains": "FINAL.pdf", "content_regex": "Pre-Proposal Meeting"}]
+  },
+  {
+    "id": "b1-bidnet-closing",
+    "query": "What is the closing date listed on the BidNet page?",
+    "bid_id": "Bid1",
+    "relevant": [{"file_contains": "BidNet", "content_regex": "Closing Date"}]
+  },
+  {
+    "id": "b2-model",
+    "query": "What laptop model is required?",
+    "bid_id": "Bid2",
+    "relevant": [
+      {"file_contains": "PORFP", "content_regex": "Latitude\\s+5550"},
+      {"file_contains": "Dell_Laptop_Specs", "content_regex": "Latitude\\s+5550"}
+    ]
+  },
+  {
+    "id": "b2-processor",
+    "query": "What processor is specified?",
+    "bid_id": "Bid2",
+    "relevant": [{"file_contains": "Dell_Laptop_Specs", "content_regex": "Core Ultra 5 125U"}]
+  },
+  {
+    "id": "b2-ram",
+    "query": "How much RAM is required?",
+    "bid_id": "Bid2",
+    "relevant": [{"file_contains": "Dell_Laptop_Specs", "content_regex": "16 GB"}]
+  },
+  {
+    "id": "b2-warranty",
+    "query": "What warranty period is required?",
+    "bid_id": "Bid2",
+    "relevant": [{"file_contains": "PORFP", "content_regex": "Extended for all machines\\s+purchased - 3 Years"}]
+  },
+  {
+    "id": "b2-mercury",
+    "query": "Is a Mercury Affidavit required?",
+    "bid_id": "Bid2",
+    "relevant": [
+      {"file_contains": "PORFP", "content_regex": "must provide a Mercury Affidavit"},
+      {"file_contains": "Mercury_Affidavit", "content_regex": "MERCURY AFFIDAVIT"}
+    ]
+  },
+  {
+    "id": "b2-delivery",
+    "query": "What is the delivery requirement?",
+    "bid_id": "Bid2",
+    "relevant": [{"file_contains": "PORFP", "content_regex": "Delivery within 45 days"}]
+  },
+  {
+    "id": "b2-manufacturer",
+    "query": "What manufacturer is specified?",
+    "bid_id": "Bid2",
+    "relevant": [
+      {"file_contains": "PORFP", "content_regex": "Manufacturer Name"},
+      {"file_contains": "PORFP", "content_regex": "authorized reseller for Dell"}
+    ]
+  },
+  {
+    "id": "x-bid-number-ja",
+    "query": "JA-207652",
+    "relevant": [{"file_contains": "", "content_regex": "JA-207652"}]
+  },
+  {
+    "id": "x-bid-number-bpm",
+    "query": "BPM044557",
+    "relevant": [{"file_contains": "", "content_regex": "BPM044557"}]
+  },
+  {
+    "id": "x-model-name",
+    "query": "Dell Latitude 5550",
+    "relevant": [{"file_contains": "", "content_regex": "Latitude\\s+5550"}]
+  },
+  {
+    "id": "x-dock-model",
+    "query": "WD22TB4",
+    "relevant": [{"file_contains": "", "content_regex": "WD22TB4"}]
+  }
+]

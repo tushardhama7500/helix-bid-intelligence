@@ -1,0 +1,837 @@
+{
+  "Bid2": {
+    "evidence_coverage": [
+      {
+        "id": "b2-bid-number",
+        "field": "Bid Number",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-title",
+        "field": "Title",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-company",
+        "field": "company_name",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-contact",
+        "field": "contact_info",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-manufacturer",
+        "field": "MFG for Registration",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-product",
+        "field": "Product",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-model",
+        "field": "Model_no",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-part",
+        "field": "Part_no",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-processor",
+        "field": "Product Specification",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-ram",
+        "field": "Product Specification",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-storage",
+        "field": "Product Specification",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-warranty",
+        "field": "Product Specification",
+        "expect": "match",
+        "scored": false,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-delivery",
+        "field": "Delivery Date",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-mercury",
+        "field": "Any Additional Documentation Required",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      },
+      {
+        "id": "b2-contract-affidavit",
+        "field": "Any Additional Documentation Required",
+        "expect": "match",
+        "scored": false,
+        "passed": false,
+        "status": null,
+        "detail": "4 chunks; patterns found: [False]"
+      },
+      {
+        "id": "b2-quote-validity",
+        "field": "Term of Bid",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": null,
+        "detail": "4 chunks; patterns found: [True]"
+      }
+    ],
+    "extraction": {
+      "bid_id": "Bid2",
+      "fields": {
+        "Bid Number": {
+          "value": [
+            "#E20P4600040",
+            "BPM044557",
+            "00004079359"
+          ],
+          "sources": [
+            {
+              "chunk_id": 557,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 1,
+              "chunk_index": 0,
+              "section": null
+            },
+            {
+              "chunk_id": 542,
+              "file_name": "Dell Laptops w_Extended Warranty - Bid Information - {3} _ BidNet Direct.html",
+              "document_type": "bid_document",
+              "page_number": null,
+              "chunk_index": 1,
+              "section": "BPM044557 - Dell Laptops w/Extended Warranty"
+            }
+          ],
+          "confidence": 0.9,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "Title": {
+          "value": "Dell Laptops w/Extended Warranty",
+          "sources": [
+            {
+              "chunk_id": 542,
+              "file_name": "Dell Laptops w_Extended Warranty - Bid Information - {3} _ BidNet Direct.html",
+              "document_type": "bid_document",
+              "page_number": null,
+              "chunk_index": 1,
+              "section": "BPM044557 - Dell Laptops w/Extended Warranty"
+            }
+          ],
+          "confidence": 0.95,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "company_name": {
+          "value": "State of Maryland Treasurer's Office",
+          "sources": [
+            {
+              "chunk_id": 542,
+              "file_name": "Dell Laptops w_Extended Warranty - Bid Information - {3} _ BidNet Direct.html",
+              "document_type": "bid_document",
+              "page_number": null,
+              "chunk_index": 1,
+              "section": "BPM044557 - Dell Laptops w/Extended Warranty"
+            }
+          ],
+          "confidence": 0.95,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "contact_info": {
+          "value": [
+            "Tamaira Hawkins, 410-260-7533, thawkins@treasurer.state.md.us",
+            "James Simpson, 410-260-6063, jsimpson@treasurer.state.md.us"
+          ],
+          "sources": [
+            {
+              "chunk_id": 563,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 3,
+              "chunk_index": 6,
+              "section": null
+            }
+          ],
+          "confidence": 0.9,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "Contract or Cooperative to use": {
+          "value": "2015 Master Contract, 060B5400007",
+          "sources": [
+            {
+              "chunk_id": 557,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 1,
+              "chunk_index": 0,
+              "section": null
+            },
+            {
+              "chunk_id": 558,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 1,
+              "chunk_index": 1,
+              "section": null
+            }
+          ],
+          "confidence": 0.9,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "Due Date": {
+          "value": null,
+          "sources": [
+            {
+              "chunk_id": 560,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 2,
+              "chunk_index": 3,
+              "section": null
+            },
+            {
+              "chunk_id": 542,
+              "file_name": "Dell Laptops w_Extended Warranty - Bid Information - {3} _ BidNet Direct.html",
+              "document_type": "bid_document",
+              "page_number": null,
+              "chunk_index": 1,
+              "section": "BPM044557 - Dell Laptops w/Extended Warranty"
+            }
+          ],
+          "confidence": 0.0,
+          "notes": "Conflicting values found in the retrieved documents; addendum reconciliation is required.",
+          "status": "conflict",
+          "conflicting_values": [
+            {
+              "value": "06/01/2024 at 2:00 PM EDT",
+              "sources": [
+                {
+                  "chunk_id": 560,
+                  "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+                  "document_type": "bid_document",
+                  "page_number": 2,
+                  "chunk_index": 3,
+                  "section": null
+                }
+              ]
+            },
+            {
+              "value": "06/10/2024 02:00 PM EDT",
+              "sources": [
+                {
+                  "chunk_id": 542,
+                  "file_name": "Dell Laptops w_Extended Warranty - Bid Information - {3} _ BidNet Direct.html",
+                  "document_type": "bid_document",
+                  "page_number": null,
+                  "chunk_index": 1,
+                  "section": "BPM044557 - Dell Laptops w/Extended Warranty"
+                }
+              ]
+            }
+          ]
+        },
+        "Pre Bid Meeting": {
+          "value": null,
+          "sources": [],
+          "confidence": 0.0,
+          "notes": "Not found in the retrieved evidence",
+          "status": "not_found",
+          "conflicting_values": []
+        },
+        "Delivery Date": {
+          "value": "Delivery within 45 days of Award.",
+          "sources": [
+            {
+              "chunk_id": 561,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 2,
+              "chunk_index": 4,
+              "section": null
+            }
+          ],
+          "confidence": 0.95,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "Term of Bid": {
+          "value": "valid for at least 90 days after the set due date",
+          "sources": [
+            {
+              "chunk_id": 560,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 2,
+              "chunk_index": 3,
+              "section": null
+            }
+          ],
+          "confidence": 0.95,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "Bid Submission Type": {
+          "value": [
+            "eMMA e-Procurement system"
+          ],
+          "sources": [
+            {
+              "chunk_id": 559,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 1,
+              "chunk_index": 2,
+              "section": null
+            },
+            {
+              "chunk_id": 558,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 1,
+              "chunk_index": 1,
+              "section": null
+            }
+          ],
+          "confidence": 0.9,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "Bid Bond Requirement": {
+          "value": null,
+          "sources": [],
+          "confidence": 0.0,
+          "notes": "Not found in the retrieved evidence",
+          "status": "not_found",
+          "conflicting_values": []
+        },
+        "Payment Terms": {
+          "value": "Payment within 120 days after shipment",
+          "sources": [
+            {
+              "chunk_id": 552,
+              "file_name": "Dell_Laptop_Specs.pdf",
+              "document_type": "specification",
+              "page_number": 3,
+              "chunk_index": 8,
+              "section": null
+            }
+          ],
+          "confidence": 0.9,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "Installation": {
+          "value": null,
+          "sources": [],
+          "confidence": 0.0,
+          "notes": "Not found in the retrieved evidence",
+          "status": "not_found",
+          "conflicting_values": []
+        },
+        "Any Additional Documentation Required": {
+          "value": [
+            "Contract Affidavit",
+            "Mercury Affidavit"
+          ],
+          "sources": [
+            {
+              "chunk_id": 529,
+              "file_name": "Contract_Affidavit.pdf",
+              "document_type": "affidavit",
+              "page_number": 1,
+              "chunk_index": 0,
+              "section": null
+            },
+            {
+              "chunk_id": 556,
+              "file_name": "Mercury_Affidavit.pdf",
+              "document_type": "affidavit",
+              "page_number": 1,
+              "chunk_index": 2,
+              "section": null
+            },
+            {
+              "chunk_id": 540,
+              "file_name": "Contract_Affidavit.pdf",
+              "document_type": "affidavit",
+              "page_number": 3,
+              "chunk_index": 11,
+              "section": null
+            }
+          ],
+          "confidence": 0.71,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "MFG for Registration": {
+          "value": "Dell",
+          "sources": [
+            {
+              "chunk_id": 561,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 2,
+              "chunk_index": 4,
+              "section": null
+            },
+            {
+              "chunk_id": 560,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 2,
+              "chunk_index": 3,
+              "section": null
+            }
+          ],
+          "confidence": 0.95,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "Model_no": {
+          "value": [
+            "Dell Latitude 5550",
+            "Dell Thunderbolt 4 Dock \u2013 WD22TB4"
+          ],
+          "sources": [
+            {
+              "chunk_id": 564,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 3,
+              "chunk_index": 7,
+              "section": null
+            },
+            {
+              "chunk_id": 542,
+              "file_name": "Dell Laptops w_Extended Warranty - Bid Information - {3} _ BidNet Direct.html",
+              "document_type": "bid_document",
+              "page_number": null,
+              "chunk_index": 1,
+              "section": "BPM044557 - Dell Laptops w/Extended Warranty"
+            }
+          ],
+          "confidence": 0.95,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "Part_no": {
+          "value": [
+            "SI# CC7802",
+            "WD22TB4",
+            "210-BLYZ"
+          ],
+          "sources": [
+            {
+              "chunk_id": 564,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 3,
+              "chunk_index": 7,
+              "section": null
+            },
+            {
+              "chunk_id": 544,
+              "file_name": "Dell_Laptop_Specs.pdf",
+              "document_type": "specification",
+              "page_number": 1,
+              "chunk_index": 0,
+              "section": null
+            }
+          ],
+          "confidence": 0.95,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "Product": {
+          "value": [
+            "Dell Latitude 5550 laptop",
+            "Dell Thunderbolt 4 Dock \u2013 WD22TB4"
+          ],
+          "sources": [
+            {
+              "chunk_id": 542,
+              "file_name": "Dell Laptops w_Extended Warranty - Bid Information - {3} _ BidNet Direct.html",
+              "document_type": "bid_document",
+              "page_number": null,
+              "chunk_index": 1,
+              "section": "BPM044557 - Dell Laptops w/Extended Warranty"
+            },
+            {
+              "chunk_id": 564,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 3,
+              "chunk_index": 7,
+              "section": null
+            }
+          ],
+          "confidence": 0.95,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "Product Specification": {
+          "value": {
+            "product": "Dell Latitude 5550",
+            "specifications": {
+              "Processor": "Intel Core Ultra 5 125U processor (12 MB cache, 12 cores, 14 threads, up to 4.3 GHz Turbo)",
+              "Memory": "16 GB: 2 x 8 GB, DDR5, 5600 MT/s (5200 MT/s with 13th Gen Intel Core processors)",
+              "Storage": "256 GB, M.2 2230, TLC, Gen 4 PCIe NVMe, SSD",
+              "Display": "15.6\\\", FHD 1920x1080, 60Hz, IPS, Non-Touch, 250 nit, 45% NTSC, FHD Cam",
+              "Graphics": "Integrated Intel graphics for Intel Core Ultra 5 125U processor",
+              "Operating System": "Windows 11 Pro, English, Brazilian Portuguese PT-BR, French, Spanish",
+              "Keyboard": "English US backlit AI hotkey keyboard with numeric keypad, 99-key",
+              "Warranty": "Dell Limited Hardware Warranty Extended for all machines purchased - 3 Years"
+            }
+          },
+          "sources": [
+            {
+              "chunk_id": 544,
+              "file_name": "Dell_Laptop_Specs.pdf",
+              "document_type": "specification",
+              "page_number": 1,
+              "chunk_index": 0,
+              "section": null
+            },
+            {
+              "chunk_id": 564,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 3,
+              "chunk_index": 7,
+              "section": null
+            }
+          ],
+          "confidence": 0.95,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        },
+        "Bid Summary": {
+          "value": "The Maryland State Treasurer\u2019s Office issued a Purchase Order Request for Proposals (PORFP #E20P4600040, solicitation BPM044557) for Dell Latitude 5550 laptops and Dell Thunderbolt 4 Dock (WD22TB4) with extended warranty. The solicitation calls for 30 units of each item, requires the laptops to be Microsoft Copilot ready, ENERGY STAR certified, and the contractor must be an authorized Dell reseller and provide a Mercury Affidavit. Proposals must be submitted electronically through the eMaryland Marketplace Advantage (eMMA) system by the closing date of 06/10/2024 02:00 PM EDT, and the award will be limited to certified small\u2011business vendors under the 2015 Master Contract 060B5400007. Additional requirements include delivery within 45 days of award, a 90\u2011day proposal validity, and compliance with the small\u2011business reserve (0 % SBR) and other security and documentation provisions.",
+          "sources": [
+            {
+              "chunk_id": 557,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 1,
+              "chunk_index": 0,
+              "section": null
+            },
+            {
+              "chunk_id": 542,
+              "file_name": "Dell Laptops w_Extended Warranty - Bid Information - {3} _ BidNet Direct.html",
+              "document_type": "bid_document",
+              "page_number": null,
+              "chunk_index": 1,
+              "section": "BPM044557 - Dell Laptops w/Extended Warranty"
+            },
+            {
+              "chunk_id": 560,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 2,
+              "chunk_index": 3,
+              "section": null
+            },
+            {
+              "chunk_id": 561,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 2,
+              "chunk_index": 4,
+              "section": null
+            },
+            {
+              "chunk_id": 559,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 1,
+              "chunk_index": 2,
+              "section": null
+            },
+            {
+              "chunk_id": 558,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 1,
+              "chunk_index": 1,
+              "section": null
+            },
+            {
+              "chunk_id": 563,
+              "file_name": "PORFP_-_Dell_Laptop_Final.pdf",
+              "document_type": "bid_document",
+              "page_number": 3,
+              "chunk_index": 6,
+              "section": null
+            }
+          ],
+          "confidence": 0.8,
+          "notes": null,
+          "status": "found",
+          "conflicting_values": []
+        }
+      },
+      "reconciliation_required": [
+        "Due Date"
+      ],
+      "errors": [],
+      "complete": true,
+      "model": "openai/gpt-oss-120b",
+      "schema_retries": 0,
+      "citation_retries": 1
+    },
+    "scores": [
+      {
+        "id": "b2-bid-number",
+        "field": "Bid Number",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=#E20P4600040 BPM044557 00004079359"
+      },
+      {
+        "id": "b2-title",
+        "field": "Title",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=Dell Laptops w/Extended Warranty"
+      },
+      {
+        "id": "b2-company",
+        "field": "company_name",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=State of Maryland Treasurer's Office"
+      },
+      {
+        "id": "b2-contact",
+        "field": "contact_info",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=Tamaira Hawkins, 410-260-7533, thawkins@treasurer.state.md.us James Simpson, 410-260-6063,"
+      },
+      {
+        "id": "b2-manufacturer",
+        "field": "MFG for Registration",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=Dell"
+      },
+      {
+        "id": "b2-product",
+        "field": "Product",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=Dell Latitude 5550 laptop Dell Thunderbolt 4 Dock \u2013 WD22TB4"
+      },
+      {
+        "id": "b2-model",
+        "field": "Model_no",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=Dell Latitude 5550 Dell Thunderbolt 4 Dock \u2013 WD22TB4"
+      },
+      {
+        "id": "b2-part",
+        "field": "Part_no",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=SI# CC7802 WD22TB4 210-BLYZ"
+      },
+      {
+        "id": "b2-processor",
+        "field": "Product Specification",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=Dell Latitude 5550 Intel Core Ultra 5 125U processor (12 MB cache, 12 cores, 14 threads, u"
+      },
+      {
+        "id": "b2-ram",
+        "field": "Product Specification",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=Dell Latitude 5550 Intel Core Ultra 5 125U processor (12 MB cache, 12 cores, 14 threads, u"
+      },
+      {
+        "id": "b2-storage",
+        "field": "Product Specification",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=Dell Latitude 5550 Intel Core Ultra 5 125U processor (12 MB cache, 12 cores, 14 threads, u"
+      },
+      {
+        "id": "b2-warranty",
+        "field": "Product Specification",
+        "expect": "match",
+        "scored": false,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=Dell Latitude 5550 Intel Core Ultra 5 125U processor (12 MB cache, 12 cores, 14 threads, u"
+      },
+      {
+        "id": "b2-delivery",
+        "field": "Delivery Date",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=Delivery within 45 days of Award."
+      },
+      {
+        "id": "b2-mercury",
+        "field": "Any Additional Documentation Required",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=Contract Affidavit Mercury Affidavit"
+      },
+      {
+        "id": "b2-contract-affidavit",
+        "field": "Any Additional Documentation Required",
+        "expect": "match",
+        "scored": false,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=Contract Affidavit Mercury Affidavit"
+      },
+      {
+        "id": "b2-quote-validity",
+        "field": "Term of Bid",
+        "expect": "match",
+        "scored": true,
+        "passed": true,
+        "status": "found",
+        "detail": "status=found, value=valid for at least 90 days after the set due date"
+      },
+      {
+        "id": "b2-no-prebid",
+        "field": "Pre Bid Meeting",
+        "expect": "not_found",
+        "scored": true,
+        "passed": true,
+        "status": "not_found",
+        "detail": "status=not_found, value=null"
+      },
+      {
+        "id": "b2-no-bond",
+        "field": "Bid Bond Requirement",
+        "expect": "not_found",
+        "scored": true,
+        "passed": true,
+        "status": "not_found",
+        "detail": "status=not_found, value=null"
+      }
+    ]
+  }
+}

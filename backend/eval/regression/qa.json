@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "id": "qa-b1-final-deadline", "bid_id": "Bid1", "question_or_field": "What is the final submission deadline?",
+      "expected_behavior": "The evidence given to the answering model contains Addendum 2's new due date (and the validated reconciliation that supersedes the RFP date).",
+      "expected_sources": [{"file": "Addendum 2", "page": 1, "pattern": "July 9, 2024"}],
+      "notes": "Procurement-specific: the answer must come from the addendum, not only the original RFP.",
+      "check": "evidence_contains", "params": {}
+    },
+    {
+      "id": "qa-b1-generic-product-question", "bid_id": "Bid1", "question_or_field": "What product is being procured?",
+      "expected_behavior": "A generic 'what is being bought' question retrieves the solicitation's scope text (the answering chunks used to rank 31st and 45th).",
+      "expected_sources": [{"file": "", "page": null, "pattern": "computing devices, including laptops"}],
+      "notes": "Phase 8 regression: query-vocabulary mismatch fixed by bounded, deterministic query expansion.",
+      "check": "evidence_contains", "params": {}
+    },
+    {
+      "id": "qa-b2-laptop-model", "bid_id": "Bid2", "question_or_field": "What laptop model is required?",
+      "expected_behavior": "Evidence contains the required Dell Latitude 5550 text from Bid2's own documents.",
+      "expected_sources": [{"file": "PORFP", "page": 3, "pattern": "Latitude\\s+5550"}, {"file": "Dell_Laptop_Specs", "page": 1, "pattern": "Latitude\\s+5550"}],
+      "notes": "",
+      "check": "evidence_contains", "params": {}
+    },
+    {
+      "id": "qa-b2-warranty", "bid_id": "Bid2", "question_or_field": "What warranty is required?",
+      "expected_behavior": "Evidence contains the 3-year extended hardware warranty requirement.",
+      "expected_sources": [{"file": "PORFP", "page": 3, "pattern": "purchased - 3 Years"}],
+      "notes": "",
+      "check": "evidence_contains", "params": {}
+    }
+  ]
+}

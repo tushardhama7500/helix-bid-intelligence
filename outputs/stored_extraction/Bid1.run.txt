@@ -1,0 +1,56 @@
+
+--- Bid1: evidence coverage (retrieval only, no LLM)
+PASS b1-bid-number            Bid Number                             4 chunks; patterns found: [True]
+PASS b1-title                 Title                                  4 chunks; patterns found: [True]
+PASS b1-company               company_name                           4 chunks; patterns found: [True]
+PASS b1-contact               contact_info                           4 chunks; patterns found: [True]
+PASS b1-due-date-conflict     Due Date                               5 chunks; patterns found: [True, True]
+PASS b1-pre-bid               Pre Bid Meeting                        6 chunks; patterns found: [True]
+PASS b1-term                  Term of Bid                            6 chunks; patterns found: [True]
+PASS b1-usb                   Product Specification                  6 chunks; patterns found: [True]
+PASS b1-warranty              Product Specification                  6 chunks; patterns found: [True] (info, not scored)
+=> 8/8 scored checks passed (1.00)
+
+=== Bid1  (model: openai/gpt-oss-120b, complete: True)
+- Bid Number [found, conf 0.9] ['JA-207652', '168884', '00004079100']  <- Student and Staff Computing Device html
+- Title [found, conf 0.9] Request For Proposal 168884 JA-207652 Student and Staff Computing Devices  <- JA-207652 Student and Staff Comput p.31; JA-207652 Student and Staff Comput p.2
+- company_name [found, conf 0.9] Dallas Independent School District  <- Student and Staff Computing Device html
+- contact_info [found, conf 0.9] ['Procurement Services, 972-925-3700, ProcurementCS@dallasisd.org']  <- Student and Staff Computing Device html
+- Contract or Cooperative to use [not_found, conf 0.0] None  <- 
+- Due Date [CONFLICT, conf 0.0] reconciliation required
+    * July 9, 2024 at 2:00 PM CST  <- Addendum 2 RFP JA-207652 Student a p.1
+    * 07/09/2024 03:00 PM EDT  <- Student and Staff Computing Device html
+    * 27-JUN-2024 14:00:00  <- JA-207652 Student and Staff Comput p.2
+- Pre Bid Meeting [CONFLICT, conf 0.0] reconciliation required
+    * June 10, 2024 at 2:00 PM CST via TEAMS video conference (Meeting ID: 270 031 467  <- JA-207652 Student and Staff Comput p.2; JA-207652 Student and Staff Comput p.2
+    * 06/10/2024 03:00 PM EDT  <- Student and Staff Computing Device html
+- Delivery Date [not_found, conf 0.0] None  <- 
+- Term of Bid [found, conf 0.95] The term of this proposal shall be for a three (3) year agreement with two (2) successive one (1) year extensi  <- JA-207652 Student and Staff Comput p.2
+- Bid Submission Type [found, conf 0.9] ['online via iSupplier portal', 'manual paper submission (sealed envelope)']  <- JA-207652 Student and Staff Comput p.9; JA-207652 Student and Staff Comput p.9
+- Bid Bond Requirement [not_found, conf 0.0] None  <- 
+- Payment Terms [found, conf 0.82] Invoices must be paid within 10 days of receiving payment from the district; retainage may not exceed 5% and c  <- JA-207652 Student and Staff Comput p.51
+- Installation [found, conf 0.9] ['Software installation (including Windows Autopilot and Chromebook Google Management enrollment)', 'Asset tag  <- JA-207652 Student and Staff Comput p.7; JA-207652 Student and Staff Comput p.3; Addendum 1 RFP JA-207652 Student a p.4
+- Any Additional Documentation Required [found, conf 0.9] ['Form 1295 (Certificate of Interested Parties)', 'Standard Form LLL (Disclosure Form to Report Lobbying)', 'C  <- Addendum 1 RFP JA-207652 Student a p.4; JA-207652 Student and Staff Comput p.26; JA-207652 Student and Staff Comput p.17
+- MFG for Registration [not_found, conf 0.0] None  <- 
+- Model_no [not_found, conf 0.0] None  <- 
+- Part_no [not_found, conf 0.0] None  <- 
+- Product [found, conf 0.8] ['laptops', 'desktops', 'tablet devices', 'display monitors']  <- JA-207652 Student and Staff Comput p.3
+- Product Specification [found, conf 0.9] {'product': 'Student Laptop', 'specifications': {'Screen Resolution': '1920-1080 Non-Touch', 'Memory': 'Minimu  <- JA-207652 Student and Staff Comput p.5
+- Bid Summary [found, conf 0.8] The Dallas Independent School District issued RFP #JA-207652 for Student and Staff Computing Devices. Proposal  <- Student and Staff Computing Device html; JA-207652 Student and Staff Comput p.31; JA-207652 Student and Staff Comput p.44
+
+Groq: 5 calls (0 failed), tokens in/out=17459/6836, call latency avg/min/max=26.0/2.8/41.8s, total 130.8s, prompt chars=[16236, 15915, 16022, 16370, 11907], finish=['stop', 'stop', 'stop', 'stop', 'stop']
+Retries: malformed-output=0, citation-follow-ups=0
+
+Database validation: valid=True, citations checked=37, found fields=12, errors=[]
+
+--- Bid1: extraction vs ground truth
+PASS b1-bid-number            Bid Number                             status=found, value=JA-207652 168884 00004079100
+PASS b1-title                 Title                                  status=found, value=Request For Proposal 168884 JA-207652 Student and Staff Computing Devices
+PASS b1-company               company_name                           status=found, value=Dallas Independent School District
+PASS b1-contact               contact_info                           status=found, value=Procurement Services, 972-925-3700, ProcurementCS@dallasisd.org
+PASS b1-due-date-conflict     Due Date                               status=conflict, values=['July 9, 2024 at 2:00 PM CST', '07/09/2024 03:00 PM EDT', '27-JUN-2024 14:00:00']
+FAIL b1-pre-bid               Pre Bid Meeting                        status=conflict, value=null
+PASS b1-term                  Term of Bid                            status=found, value=The term of this proposal shall be for a three (3) year agreement with two (2) successive 
+PASS b1-usb                   Product Specification                  status=found, value=Student Laptop 1920-1080 Non-Touch Minimum 16GB RAM DDR5 802.11AX WiFi-6E and Bluetooth 5.
+FAIL b1-warranty              Product Specification                  status=found, value=Student Laptop 1920-1080 Non-Touch Minimum 16GB RAM DDR5 802.11AX WiFi-6E and Bluetooth 5. (info, not scored)
+=> 7/8 scored checks passed (0.88)

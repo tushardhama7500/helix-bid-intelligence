@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "id": "rc-b1-due-date-replaced-by-addendum-2", "bid_id": "Bid1", "question_or_field": "due_date",
+      "expected_behavior": "The RFP due date 27-JUN-2024 is replaced by Addendum 2's July 9, 2024; status resolved, with the original preserved.",
+      "expected_sources": [{"file": "FINAL.pdf", "page": 2, "pattern": "Solicitation Due"}, {"file": "Addendum 2", "page": 1, "pattern": "new due date"}],
+      "notes": "Deterministic: explicit 'The new due date ... will be ...' wording; no model involved.",
+      "check": "reconciliation", "params": {"field": "due_date", "status": "resolved", "final_pattern": "July 9, 2024 at 2:00 PM CST", "original_pattern": "27-JUN-2024"}
+    },
+    {
+      "id": "rc-b1-pre-bid-meeting-unchanged", "bid_id": "Bid1", "question_or_field": "pre_bid_meeting",
+      "expected_behavior": "No addendum changes the pre-bid meeting; the original stays in force.",
+      "expected_sources": [{"file": "FINAL.pdf", "page": 2, "pattern": "Pre-Proposal Meeting"}],
+      "notes": "Addendum 1 is Q&A and contains no change wording for this field.",
+      "check": "reconciliation", "params": {"field": "pre_bid_meeting", "status": "unchanged", "final_pattern": "10-JUN-2024", "original_pattern": "10-JUN-2024"}
+    },
+    {
+      "id": "rc-b2-no-addenda-no-timeline", "bid_id": "Bid2", "question_or_field": "(all fields)",
+      "expected_behavior": "Bid2 has no addenda: no timeline is fabricated and no field is marked changed.",
+      "expected_sources": [],
+      "notes": "Guards against inventing history for a bid that has none.",
+      "check": "no_timeline", "params": {}
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "cases": [
+    {
+      "id": "ex-b1-due-date-both-values-in-evidence",
+      "bid_id": "Bid1",
+      "question_or_field": "due_date",
+      "expected_behavior": "The evidence retrieved for the due-date field contains BOTH the original RFP value and the Addendum 2 value, so an extractor can only report a conflict and must not pick one.",
+      "expected_sources": [
+        {
+          "file": "FINAL.pdf",
+          "page": 2,
+          "pattern": "Solicitation Due"
+        },
+        {
+          "file": "Addendum 2",
+          "page": 1,
+          "pattern": "July 9, 2024"
+        }
+      ],
+      "notes": "Phase 5 rule: conflicting supported values are reported, never resolved. Real gpt-oss-120b runs returned all three dates (RFP, Addendum 2, BidNet listing).",
+      "check": "field_evidence",
+      "params": {
+        "field": "due_date",
+        "patterns": [
+          "27-JUN-2024",
+          "July 9, 2024"
+        ]
+      }
+    },
+    {
+      "id": "ex-b1-pre-bid-meeting",
+      "bid_id": "Bid1",
+      "question_or_field": "pre_bid_meeting",
+      "expected_behavior": "The pre-proposal meeting date from the RFP is in the field's evidence.",
+      "expected_sources": [
+        {
+          "file": "FINAL.pdf",
+          "page": 2,
+          "pattern": "Pre-Proposal Meeting"
+        }
+      ],
+      "notes": "The same event also appears in another notation on the BidNet listing; a real model sometimes reported that as a conflict (non-deterministic).",
+      "check": "field_evidence",
+      "params": {
+        "field": "pre_bid_meeting",
+        "patterns": [
+          "10-JUN-2024"
+        ]
+      }
+    },
+    {
+      "id": "ex-b2-multiple-identifiers",
+      "bid_id": "Bid2",
+      "question_or_field": "bid_number",
+      "expected_behavior": "Both the PORFP number and the eMMA project number are retrievable for the bid-number field, which is a list field: several identifiers are valid together, not a conflict.",
+      "expected_sources": [
+        {
+          "file": "PORFP",
+          "page": 1,
+          "pattern": "E20P4600040"
+        }
+      ],
+      "notes": "Real run: scalar bid_number reported a false conflict between #E20P4600040 and BPM044557.",
+      "check": "field_evidence",
+      "params": {
+        "field": "bid_number",
+        "patterns": [
+          "E20P4600040",
+          "BPM044557"
+        ]
+      }
+    },
+    {
+      "id": "ex-b2-model-and-dock",
+      "bid_id": "Bid2",
+      "question_or_field": "model_no",
+      "expected_behavior": "The laptop model and the docking-station model are both in the evidence, so a list-valued model field can hold both.",
+      "expected_sources": [
+        {
+          "file": "PORFP",
+          "page": 3,
+          "pattern": "Latitude\\s+5550"
+        }
+      ],
+      "notes": "Real run: scalar product/part fields reported false conflicts between the laptop and the dock.",
+      "check": "field_evidence",
+      "params": {
+        "field": "model_no",
+        "patterns": [
+          "Latitude\\s+5550",
+          "WD22TB4"
+        ]
+      }
+    },
+    {
+      "id": "ex-b2-delivery-requirement",
+      "bid_id": "Bid2",
+      "question_or_field": "delivery_date",
+      "expected_behavior": "The delivery requirement 'within 45 days of Award' is in the delivery field's evidence.",
+      "expected_sources": [
+        {
+          "file": "PORFP",
+          "page": 2,
+          "pattern": "Delivery within 45 days"
+        }
+      ],
+      "notes": "",
+      "check": "field_evidence",
+      "params": {
+        "field": "delivery_date",
+        "patterns": [
+          "Delivery within 45 days"
+        ]
+      }
+    },
+    {
+      "id": "ex-b1-repair-time-is-not-delivery",
+      "bid_id": "Bid1",
+      "question_or_field": "delivery_date",
+      "expected_behavior": "The field definition excludes repair/support response times (a real run had returned 'within five business days of the District reporting the issue' as the delivery date).",
+      "expected_sources": [
+        {
+          "file": "FINAL.pdf",
+          "page": 4,
+          "pattern": "five \\(5\\) business days"
+        }
+      ],
+      "notes": "Checked by field definition: warranty/repair text exists in Bid1 but must not be treated as delivery.",
+      "check": "field_evidence",
+      "params": {
+        "field": "delivery_date",
+        "patterns": [
+          ".*"
+        ]
+      }
+    },
+    {
+      "id": "ex-b1-source-wording-65hdmi",
+      "bid_id": "Bid1",
+      "question_or_field": "product_specification",
+      "expected_behavior": "The cited FINAL.pdf text really contains '65HDMI' (as printed in the RFP), so the extracted spec must preserve it verbatim rather than correct it.",
+      "expected_sources": [
+        {
+          "file": "FINAL.pdf",
+          "page": null,
+          "pattern": "65HDMI"
+        }
+      ],
+      "notes": "Verified in the stored chunks: the document itself prints '65HDMI'. Extraction never corrects source wording.",
+      "check": "field_evidence",
+      "params": {
+        "field": "product_specification",
+        "patterns": [
+          "65HDMI"
+        ]
+      }
+    },
+    {
+      "id": "ex-b1-several-products-have-separate-specs",
+      "bid_id": "Bid1",
+      "question_or_field": "product_specification",
+      "expected_behavior": "Bid1 gives separate minimum requirements for several product lines (Chromebooks, Windows laptop, ...); the spec evidence contains more than one, so a multi-product Product Specification is supported.",
+      "expected_sources": [],
+      "notes": "A list of per-product spec objects is only produced when each is cited and grounded separately.",
+      "check": "field_evidence",
+      "params": {
+        "field": "product_specification",
+        "patterns": [
+          "Chromebook",
+          "Windows Laptop"
+        ]
+      }
+    },
+    {
+      "id": "ex-b1-identifier-labels-in-evidence",
+      "bid_id": "Bid1",
+      "question_or_field": "bid_number",
+      "expected_behavior": "The evidence labels JA-207652 as the Solicitation Number and shows 168884 as a SOURCING # and 00004079100 as a Reference Number, so only JA-207652 is the solicitation's own number.",
+      "expected_sources": [
+        {
+          "file": "BidNet",
+          "page": null,
+          "pattern": "Solicitation Number"
+        }
+      ],
+      "notes": "Labels come from the BidNet listing; the extraction prompt scopes Bid Number to the labelled solicitation number.",
+      "check": "field_evidence",
+      "params": {
+        "field": "bid_number",
+        "patterns": [
+          "Solicitation Number\\s+JA-207652",
+          "SOURCING #168884",
+          "Reference Number\\s+00004079100"
+        ]
+      }
+    }
+  ]
+}

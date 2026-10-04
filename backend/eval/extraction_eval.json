@@ -1,0 +1,34 @@
+{
+  "_comment": "Ground truth checked by hand against the ingested text of the real documents. 'match' = status found and every pattern matches the extracted value; 'conflict' = status conflict and every pattern matches some conflicting value; 'not_found' = the documents do not state it, so value must be null. 'info' checks are reported but not scored.",
+  "Bid1": [
+    {"id": "b1-bid-number", "field": "Bid Number", "expect": "match", "patterns": ["JA-207652|168884"], "source_contains": "JA-207652"},
+    {"id": "b1-title", "field": "Title", "expect": "match", "patterns": ["Student and Staff Computing Devices"]},
+    {"id": "b1-company", "field": "company_name", "expect": "match", "patterns": ["Dallas (Independent School District|ISD)"]},
+    {"id": "b1-contact", "field": "contact_info", "expect": "match", "patterns": ["dallasisd\\.org"]},
+    {"id": "b1-due-date-conflict", "field": "Due Date", "expect": "conflict", "patterns": ["27-JUN-2024|June 27", "July 9|07/09/2024"]},
+    {"id": "b1-pre-bid", "field": "Pre Bid Meeting", "expect": "match", "patterns": ["10-JUN-2024|June 10|06/10/2024"]},
+    {"id": "b1-term", "field": "Term of Bid", "expect": "match", "patterns": ["\\b(3|three)\\b"]},
+    {"id": "b1-usb", "field": "Product Specification", "expect": "match", "patterns": ["USB\\s*3"]},
+    {"id": "b1-warranty", "field": "Product Specification", "expect": "match", "patterns": ["warranty"], "kind": "info"}
+  ],
+  "Bid2": [
+    {"id": "b2-bid-number", "field": "Bid Number", "expect": "match", "patterns": ["E20P4600040|BPM044557"]},
+    {"id": "b2-title", "field": "Title", "expect": "match", "patterns": ["Dell Laptops?"]},
+    {"id": "b2-company", "field": "company_name", "expect": "match", "patterns": ["Treasurer"]},
+    {"id": "b2-contact", "field": "contact_info", "expect": "match", "patterns": ["hawkins"]},
+    {"id": "b2-manufacturer", "field": "MFG for Registration", "expect": "match", "patterns": ["\\bDell\\b"]},
+    {"id": "b2-product", "field": "Product", "expect": "match", "patterns": ["Latitude 5550|Dell Laptops?"]},
+    {"id": "b2-model", "field": "Model_no", "expect": "match", "patterns": ["5550"]},
+    {"id": "b2-part", "field": "Part_no", "expect": "match", "patterns": ["210-BLYZ|CC7802"]},
+    {"id": "b2-processor", "field": "Product Specification", "expect": "match", "patterns": ["Core Ultra 5 125U"]},
+    {"id": "b2-ram", "field": "Product Specification", "expect": "match", "patterns": ["16 ?GB"]},
+    {"id": "b2-storage", "field": "Product Specification", "expect": "match", "patterns": ["256 ?GB"]},
+    {"id": "b2-warranty", "field": "Product Specification", "expect": "match", "patterns": ["warranty"], "kind": "info"},
+    {"id": "b2-delivery", "field": "Delivery Date", "expect": "match", "patterns": ["45 days"]},
+    {"id": "b2-mercury", "field": "Any Additional Documentation Required", "expect": "match", "patterns": ["Mercury Affidavit"]},
+    {"id": "b2-contract-affidavit", "field": "Any Additional Documentation Required", "expect": "match", "patterns": ["Contract Affidavit"], "kind": "info"},
+    {"id": "b2-quote-validity", "field": "Term of Bid", "expect": "match", "patterns": ["90"]},
+    {"id": "b2-no-prebid", "field": "Pre Bid Meeting", "expect": "not_found", "patterns": []},
+    {"id": "b2-no-bond", "field": "Bid Bond Requirement", "expect": "not_found", "patterns": []}
+  ]
+}

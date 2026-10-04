@@ -1,0 +1,35 @@
+{
+  "_comment": "Cases checked by hand against the ingested text of the real Bid1/Bid2 documents. Bid1 Addendum 2 replaces the RFP due date; nothing in the real corpus changes the pre-bid meeting; Bid2 has no addenda. The real corpus contains no genuinely unresolvable conflict, so conflict preservation is covered by unit tests (tests/test_reconciliation_rules.py), not by this file.",
+  "cases": [
+    {
+      "id": "b1-due-date-replaced-by-addendum-2",
+      "bid": "Bid1", "field": "due_date",
+      "expect": {
+        "status": "resolved", "method": "explicit_addendum_change",
+        "original_pattern": "27-JUN-2024", "final_pattern": "July 9, 2024 at 2:00 PM CST",
+        "addendum_numbers": [2],
+        "original_files": ["JA-207652 Student and Staff Computing Devices FINAL.pdf"],
+        "final_files": ["Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf"]
+      }
+    },
+    {
+      "id": "b1-pre-bid-meeting-unchanged",
+      "bid": "Bid1", "field": "pre_bid_meeting",
+      "expect": {
+        "status": "unchanged", "method": "no_change",
+        "original_pattern": "10-JUN-2024", "final_pattern": "10-JUN-2024",
+        "final_files": ["JA-207652 Student and Staff Computing Devices FINAL.pdf"]
+      }
+    },
+    {
+      "id": "b1-timeline-order",
+      "bid": "Bid1", "field": "*",
+      "expect": {"addendum_numbers_in_order": [1, 2], "ordering": "explicit_number"}
+    },
+    {
+      "id": "b2-no-addenda-nothing-changes",
+      "bid": "Bid2", "field": "*",
+      "expect": {"addendum_numbers_in_order": [], "ordering": "none", "no_field_changed": true}
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "cases": [
+    {
+      "id": "cf-b1-two-addenda-ordered-by-header", "bid_id": "Bid1", "question_or_field": "(addendum timeline)",
+      "expected_behavior": "Both Bid1 addenda are identified from their own headers and ordered Addendum 1 then Addendum 2, so the later one governs.",
+      "expected_sources": [{"file": "Addendum 2", "page": 1, "pattern": "ADDENDUM No. 2"}, {"file": "Addendum 1", "page": 1, "pattern": "ADDENDUM No. 1"}],
+      "notes": "Numbers come from the document content, not the file name.",
+      "check": "field_evidence", "params": {"field": "due_date", "patterns": ["ADDENDUM No. 2|new due date"]}
+    }
+  ]
+}
